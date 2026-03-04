@@ -32,7 +32,11 @@ teachers.unshift("Sarah");
 
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
-const lewisIndex = null;
+// EDIT: modificato lewisIndex da const a let per poterlo modificare nel ciclo
+let lewisIndex = null;
+for (let i=0; i<teachers.length; i++) {
+  if (teachers[i] == "Lewis") lewisIndex = i;
+}
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
@@ -41,6 +45,7 @@ const isTeachersEmpty = null;
 //Stampe di debug
 console.log("fourtteachers ", fourthTeacher,
 "lastTeacher ", lastTeacher,
-"firstTeacher ", firstTeacher
+"firstTeacher ", firstTeacher,
+"lewisIndex ", lewisIndex 
 );
 console.log("array:", teachers);
