@@ -32,7 +32,7 @@ teachers.unshift("Sarah");
 
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
-// EDIT: modificato lewisIndex da const a let per poterlo modificare nel ciclo
+// EDIT: modificato lewisIndex da const a let per poterlo modificare nel ciclo e portare il risultato fuori
 let lewisIndex = null;
 for (let i=0; i<teachers.length; i++) {
   if (teachers[i] == "Lewis") lewisIndex = i;
@@ -40,12 +40,17 @@ for (let i=0; i<teachers.length; i++) {
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
-const isTeachersEmpty = null;
+// EDIT come sopra ho modificato da const a let, ho verificato che sia vuoto vedendo 
+// se ha all'interno almeno un elemento con il metodo lenght
+
+let isTeachersEmpty = null;
+if (teachers.length < 1) { isTeachersEmpty = true; }
+else { isTeachersEmpty = false; }
 
 //Stampe di debug
-console.log("fourtteachers ", fourthTeacher,
-"lastTeacher ", lastTeacher,
-"firstTeacher ", firstTeacher,
-"lewisIndex ", lewisIndex 
-);
+console.log("fourtteachers ", fourthTeacher)
+console.log("lastTeacher ", lastTeacher);
+console.log("firstTeacher ", firstTeacher);
+console.log("lewisIndex ", lewisIndex);
+console.log("isTeachersEmpty", isTeachersEmpty );
 console.log("array:", teachers);
