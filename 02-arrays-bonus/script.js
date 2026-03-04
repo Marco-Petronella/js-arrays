@@ -43,12 +43,16 @@ for (let i=0; i<teachers.length;i++) {
 }
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
-const teachersString = null;
+let teachersString = teachers[0];
+for (let i=1; i<teachers.length; i++) {
+  if (teachers[i] != undefined) teachersString= `${teachersString}, ${teachers[i]}`;
+}
 
 // stampa di debug
 console.log(reversedTeachers);
 console.log(longNames);
 console.log(isFabioPresent);
+console.log(teachersString);
 console.log(teachers);
 
 
