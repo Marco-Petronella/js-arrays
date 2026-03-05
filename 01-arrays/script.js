@@ -33,19 +33,28 @@ teachers.unshift("Sarah");
 // 7. Trova l'indice dell'insegnante 'Lewis' nell'array teachers
 // e salvalo nella variabile lewisIndex
 // EDIT: modificato lewisIndex da const a let per poterlo modificare nel ciclo e portare il risultato fuori
-let lewisIndex = null;
-for (let i=0; i<teachers.length; i++) {
-  if (teachers[i] == "Lewis") lewisIndex = i;
-}
+
+const lewisIndex=teachers.indexOf("Lewis")
+
+// Test con findIndex
+// const ricercaIndice = (ricerca) => ricerca == "Lewis"
+// console.log(teachers.findIndex(ricercaIndice));
+
+// modificata usando il metodo findIndex
+// let lewisIndex = null;
+// for (let i=0; i<teachers.length; i++) {
+//   if (teachers[i] == "Lewis") lewisIndex = i;
+// }
 
 // 8. Verifica se l'array teachers è vuoto
 // e salva il risultato nella variabile isTeachersEmpty
 // EDIT come sopra ho modificato da const a let, ho verificato che sia vuoto vedendo 
 // se ha all'interno almeno un elemento con il metodo lenght
 
-let isTeachersEmpty = null;
-if (teachers.length < 1) { isTeachersEmpty = true; }
-else { isTeachersEmpty = false; }
+const isTeachersEmpty = (teachers.lenght>0);
+
+// if (teachers.length < 1) { isTeachersEmpty = true; }
+// else { isTeachersEmpty = false; }
 
 //Stampe di debug
 console.log("fourtteachers ", fourthTeacher)
